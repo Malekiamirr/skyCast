@@ -1,0 +1,6 @@
+.leaflet-container {
+  width: -webkit-fill-available;
+  height: 40vh;
+  margin: auto;
+  border-radius: 20px;
+}

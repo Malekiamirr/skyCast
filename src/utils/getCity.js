@@ -12,7 +12,6 @@ const getCity = async (lat, lng) => {
     locality: response.data.locality,
     province: response.data.principalSubdivision,
   };
-  console.log(data);
 
   return data;
 };

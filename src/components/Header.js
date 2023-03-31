@@ -128,6 +128,7 @@ function Header() {
           <img
             src={profileUrl}
             className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+            alt='user profile'
           />
         </div>
       </div>

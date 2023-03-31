@@ -13,8 +13,7 @@ import WeatherContext from "../context/weather";
 import getCity from "../utils/getCity";
 
 function ShowMap() {
-  const { fetchWeather, locationData, setInputValue } =
-    useContext(WeatherContext);
+  const { fetchWeather, locationData } = useContext(WeatherContext);
   const [latlon, setLatlon] = useState({ lat: 35.1686, lon: 51.0205 });
 
   const { darkMode } = useContext(WeatherContext);

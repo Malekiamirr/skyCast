@@ -66,7 +66,6 @@ function Provider({ children }) {
     const response = await axios.get(
       `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
     );
-    console.log(response.data);
     handleForcastDataResponse(response.data);
   };
 

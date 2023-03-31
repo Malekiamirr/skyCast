@@ -5,7 +5,7 @@ const showWeatherImage = (icon) => {
     return image.includes(icon);
   });
 
-  return <img src={image} />;
+  return <img src={image} alt='weather image' />;
 };
 
 export default showWeatherImage;

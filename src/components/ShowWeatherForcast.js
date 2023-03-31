@@ -25,7 +25,7 @@ function ShowWeatherForcast() {
     if (pageToShow === "forcast") {
       const content = (
         <>
-          <div className='col-span-6'>
+          <div className='col-span-3 sm:col-span-6 w-full md:w-auto'>
             <OneDayWeather isActive={true} />
           </div>
           <OneDayWeather isActive={false} day={1} />
@@ -43,7 +43,7 @@ function ShowWeatherForcast() {
     if (pageToShow === "today") {
       const content = (
         <>
-          <div className='col-span-6'>
+          <div className='col-span-3 sm:col-span-6 w-full md:w-auto'>
             <TodayWeather />
           </div>
           <HourlyWeather hour={4} />
@@ -61,7 +61,7 @@ function ShowWeatherForcast() {
     if (pageToShow === "tomorrow") {
       const content = (
         <>
-          <div className='col-span-6'>
+          <div className='col-span-3 sm:col-span-6 w-full md:w-auto'>
             <TomorrowWeather />
           </div>
           <HourlyWeather hour={24} />
@@ -82,7 +82,7 @@ function ShowWeatherForcast() {
       <div className='flex justify-between px-2 md:px-0 items-center mt-6 '>
         <div
           className={`${darkMode === true ? " text-white" : "text-onyx"}
-        flex gap-2 sm:gap-4 text-base sm:text-lg font-light`}
+        flex gap-4 sm:gap-4 text-base font-light`}
         >
           <button
             className={`${
@@ -114,7 +114,7 @@ function ShowWeatherForcast() {
         <div
           className={`
         ${darkMode === true ? "bg-eerie text-white" : "bg-gray2 text-onyx"}
-        flex gap-2 text-sm font-Poppins font-normal rounded-full`}
+        sm:flex gap-2 text-sm font-Poppins font-normal rounded-full hidden`}
         >
           <button
             onClick={() => handleDataToShow("forcast")}
@@ -134,7 +134,7 @@ function ShowWeatherForcast() {
           </button>
         </div>
       </div>
-      <div className='mt-6 grid grid-cols-6 gap-4 place-content-center md:w-full md:flex md:justify-between md:gap-4 xl:justify-center '>
+      <div className='mt-6 grid grid-cols-3 sm:grid-cols-6 gap-4 place-content-center md:w-full md:flex md:justify-between justify-items-center sm:justify-items-start md:gap-4 xl:justify-center '>
         {renderedToScreen()}
       </div>
     </div>

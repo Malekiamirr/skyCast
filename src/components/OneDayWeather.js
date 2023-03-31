@@ -92,7 +92,7 @@ function OneDayWeather({ day, isActive }) {
         darkMode === true
           ? "bg-eerie text-white"
           : "bg-gray2 text-gray text-opacity-70"
-      } flex flex-col justify-around items-center w-24 h-48 md:h-auto px-2 py-4 rounded-3xl hover:bg-opacity-70 hover:-translate-y-1 transition-transform duration-200 `}
+      }  flex flex-col justify-around items-center w-24 h-48 md:h-auto px-2 py-4 rounded-3xl hover:bg-opacity-70 hover:-translate-y-1 transition-transform duration-200`}
     >
       <p className='text-xl text-center'>{AddOneDay(date, day)}</p>
       <div

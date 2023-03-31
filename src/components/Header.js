@@ -20,7 +20,6 @@ function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
 
   return (
@@ -56,18 +55,16 @@ function Header() {
 
       <div
         onClick={toggleMenu}
-        className='md:hidden flex flex-col gap-1 justify-center items-center text-onyx pr-10 cursor-pointer relative'
+        className='md:hidden flex flex-col gap-1 justify-center items-center text-onyx pr-5 cursor-pointer relative'
       >
         <div className={` border-b-2 w-6 h-1`}></div>
-
         <div className={` border-b-2 w-6 h-1`}></div>
-
         <div className={`border-b-2 w-6 h-1`}></div>
 
         <div
           className={`${
             isMenuOpen ? "hidden" : ""
-          } absolute top-10 right-10 h-screen bg-gray-900 bg-opacity-40`}
+          } absolute top-10 right-5 transition-all duration-200`}
         >
           <div
             className={`${

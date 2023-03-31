@@ -14,7 +14,7 @@ function Provider({ children }) {
   const fetchGeoLoaction = async (city) => {
     const apiKey = "e7533ba8e605f8792205b485fc722e30";
     const response = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`
     );
     handleLocationResponse(response);
     fetchWeather(response.data[0].lat, response.data[0].lon);
@@ -64,7 +64,7 @@ function Provider({ children }) {
   const fetchWeather = async (lat, lon) => {
     const apiKey = "de2c40e370d58e257faf07ba4ea95840";
     const response = await axios.get(
-      `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
     );
     handleForcastDataResponse(response.data);
   };

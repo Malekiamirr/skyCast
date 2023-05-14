@@ -27,11 +27,12 @@ function ShowMap() {
 
       map.on("click", (e) => {
         setLatlon(e.latlng);
-        const data = getCity(e.latlng.lat, e.latlng.lng);
-        if (data.city) locationData.cityName = data.city;
-        else if (data.locality) locationData.cityName = data.locality;
-        else locationData.cityName = data.province;
-        locationData.country = data.country;
+        getCity(e.latlng.lat, e.latlng.lng).then((res) => {
+          if (res.city) locationData.cityName = res.city;
+          else if (res.locality) locationData.cityName = res.locality;
+          else locationData.cityName = res.province;
+          locationData.country = res.country;
+        });
 
         fetchWeather(e.latlng.lat, e.latlng.lng);
       });
